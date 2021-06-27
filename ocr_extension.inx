@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Image To Text</name>
+  <id>org.inkscape.ocr</id>
+  <!--
+  <param name="param_str" type="string" gui-text="Your name:"></param>
+  <param name="tab" type="notebook">
+    <page name="Options" gui-text="Personal Info">
+      <param name="color_param" gui-text="Nail Color" type="color">-1</param>
+      <param name="int_param" type="int" appearance="full" min="0" max="100" indent="0" gui-text="Age">0</param>
+      <param name="float_param" type="float" min="1" max="1000" gui-text="Height (meters):">1.5</param>
+      <param name="option_param" type="optiongroup" appearance="radio" gui-text="I like:">
+        <option value="choc">Chocolate</option>
+        <option value="shoe">Shoes</option>
+        <option value="oper">Opera</option>
+      </param>
+    </page>
+    <page name="Help" gui-text="Help">
+      <label xml:space="preserve">
+This template provides extension writers with a basis to write their python based Inkscape extensions quickly and properly.
+
+This testing help text can be changed to help users of the extension.
+      </label>
+     </page>
+   </param>
+   <param name="bool_param" type="bool" gui-text="God powers?">true</param>
+   -->
+  <effect>
+    <!--object-type>path</object-type-->
+    <effects-menu>
+      <submenu name="OCR"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">ocr_extension.py</command>
+  </script>
+</inkscape-extension>
