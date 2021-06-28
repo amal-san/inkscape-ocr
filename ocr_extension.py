@@ -37,8 +37,8 @@ class OcrOutputExtension(inkex.OutputExtension):
             help="An example option, put your options here")
 
     def effect(self):
-        cairosvg.svg2png(url=self.file_io.name, write_to='read.png')
         try:
+            cairosvg.svg2png(url=self.file_io.name, write_to='read.png')
             im = Image.open('read.png')
             text = pytesseract.image_to_string(im,lang ='eng')
             inkex.errormsg(text.rstrip())
