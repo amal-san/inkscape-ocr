@@ -41,9 +41,10 @@ class OcrOutputExtension(inkex.OutputExtension):
             cairosvg.svg2png(url=self.file_io.name, write_to='read.png')
             im = Image.open('read.png')
             text = pytesseract.image_to_string(im,lang ='eng')
-            inkex.errormsg(text.rstrip())
+            self.msg(text.rstrip())
             os.remove('read.png')
         except:
+            self.msg("Image reading failed!")
             return
     def save(self,stream):
         pass
